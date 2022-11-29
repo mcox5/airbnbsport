@@ -6,3 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 # Esto es un comentario de prueba branch
+puts "Cleaning Sports..."
+Sport.destroy_all
+sports = ["Tenis", "Futbol", "Trekking", "Basquetball"]
+puts "Creating Sports"
+sports.each do |sport|
+  Sport.create(name: sport)
+end
+puts "Sport created!"
