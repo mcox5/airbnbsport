@@ -1,0 +1,8 @@
+<ul>
+<% @bookings.each do |booking| %>
+  <li><%= booking.start_date %></li>
+  <li><%= booking.end_date %></li>
+  <li><%= booking.booking_price %></li>
+  <li><%= User.find((booking.user_id).to_i).email %></li>
+<% end %>
+</ul>
