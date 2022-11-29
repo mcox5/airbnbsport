@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # Esto es un comentario de prueba branch
 puts "Cleaning Sports..."
+Product.destroy_all
 Sport.destroy_all
 sports = ["Tenis", "Futbol", "Trekking", "Basquetball"]
 puts "Creating Sports"
