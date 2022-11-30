@@ -1,11 +1,18 @@
 // Specific CSS for your home-page
 .text-carousel {
   position:absolute;
+  color: #F4F4F4;
   top: 0;
   bottom: 0;
   margin: auto 0;
   height: max-content;
   z-index: 99;
+  width: 40px;
+}
+.carousel {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle
 }
 .footer {
   background: #F4F4F4;
