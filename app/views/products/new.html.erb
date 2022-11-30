@@ -5,3 +5,27 @@
 <%= f.association :sport %>
 <%= f.submit %>
 <% end %>
+
+
+<div class="mb-3">
+  <%= simple_form_for(@product) do |f| %>
+    <label for="formFile" class="form-label"><%= f.input :name %></label>
+    <input class="form-control" type="file" id="formFile">
+  </div>
+  <div class="mb-3">
+    <label for="formFileMultiple" class="form-label"><%= f.input :description %></label>
+    <input class="form-control" type="file" id="formFileMultiple" multiple>
+  </div>
+  <div class="mb-3">
+    <label for="formFileDisabled" class="form-label"><%= f.input :price %></label>
+    <input class="form-control" type="file" id="formFileDisabled" disabled>
+  </div>
+  <div class="mb-3">
+    <label for="formFileSm" class="form-label"><%= f.association :sport %></label>
+    <input class="form-control form-control-sm" id="formFileSm" type="file">
+  </div>
+  <div>
+    '<%= f.submit 'Create', class: 'btn btn-primary' %>
+  </div>
+  <%end%>
+</div>

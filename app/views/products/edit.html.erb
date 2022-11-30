@@ -5,3 +5,14 @@
 <%= f.input :sport_id %>
 <%= f.submit %>
 <% end %>
+
+
+<div class="card-product">
+<%= simple_form_for(@product) do |f| %>
+  <img src="" />
+  <div class="card-product-infos">
+    <%= f.input :name %>
+    <p><%= f.input :sport_id %><strong><%= f.input :description %></strong> <%= f.input :price %>.</p>
+  </div>
+  <% end %>
+</div>
