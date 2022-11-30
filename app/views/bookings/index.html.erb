@@ -1,5 +1,5 @@
-<ul>
 <% @bookings.each do |booking| %>
+<<<<<<< HEAD
   <li><%= booking.start_date %></li>
   <li><%= booking.end_date %></li>
   <li><%= booking.booking_price %></li>
@@ -15,5 +15,14 @@
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   <%= end %>
+=======
+  <div class="card col-2 sm-2 md-2 lg-2 mx-3 py-3 mb-1" style="width: 18rem;">
+    <img src="..." class="card-img-top mx-2 py-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= booking.product.name %></h5>
+      <p class="card-text"><%= booking.booking_price %> $USD</p>
+      <a href="#" class="btn btn-primary">Ver detalles</a>
+    </div>
+>>>>>>> master
   </div>
-</div>
+<% end %>
