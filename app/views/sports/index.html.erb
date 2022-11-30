@@ -1,0 +1,23 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-black">
+    <h1>Save any kind of sports</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">My sports</h3>
+    <%= link_to "My sports", new_sport_path, class: "btn btn-flat" %>
+  </div>
+  <div class="row">
+    <% @sports.each do |sport| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to sports_path(sport), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in">
+            <%= sport.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
