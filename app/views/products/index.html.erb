@@ -27,13 +27,17 @@
   </div>
 </div>
 
+<div class="mt-3 mx-4">
+  <button type="button" class="btn btn-outline-secondary"><%= link_to "Arrienda tu propio equipo!", new_product_path, class: "nav-link" %> </button>
+</div>
+
 <div class="row row-cols-1 row-cols-md-3 g-4 my-2 mx-2 py-2 px-2">
   <% @products.each do |product| %>
   <div class="col">
     <div class="card h-100">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title"><%= product.name %></h5>
+        <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
         <p class="card-text"><%= product.description %></p>
       </div>
       <div class="card-footer">
