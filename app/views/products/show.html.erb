@@ -1,13 +1,22 @@
+<%= simple_form_for(@product) do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.input :sport_id %>
+<%= f.submit %>
+<% end %>
+
 <div class="card text-center">
+<%= simple_form_for(@product) do |f| %>
   <div class="card-header">
-    Featured
+    Catalog
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title"><%= f.input :name %></h5>
+    <p class="card-text"><%= f.input :description %></p>
+    <%= f.submit 'Add', class: 'btn btn-primary' %>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+    <%= f.input :sport_id %>
   </div>
 </div>
