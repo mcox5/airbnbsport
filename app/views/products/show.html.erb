@@ -1,4 +1,8 @@
-<div class="card text-center">
+
+
+
+<main>
+  <div class="card text-center">
   <div class="card-header">
     Catalog
   </div>
@@ -10,3 +14,23 @@
     <%= "id deporte" %>
   </div>
 </div>
+</main>
+
+<footer>
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <div class="mt-3 mx-4">
+          <button type="button" class="btn btn-outline-secondary"><%= link_to "Alquilar", new_product_booking_path(@product) %> </button>
+          <button><%= link_to "Arrienda tu propio equipo!", new_product_path, class: "nav-link" %> </button>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+    </div>
+</footer>
