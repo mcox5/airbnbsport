@@ -1,9 +1,26 @@
-  <div class="card col-2 sm-2 md-2 lg-2 mx-3 py-3 mb-1" style="width: 18rem;">
-    <img src="..." class="card-img-top mx-2 py-2" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"><%= booking.product.name %></h5>
-      <p class="card-text"><%= booking.booking_price %> $USD</p>
-      <a href="#" class="btn btn-primary">Ver detalles</a>
-    </div>
-  </div>
-
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Producto</th>
+        <th>Inicio alquiler</th>
+        <th>Fin alquiler</th>
+        <th>Precio</th>
+        <th> Mostrar </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |b| %>
+        <tr>
+          <td><%= b.product_id%></td>
+          <td><%= b.product.name%></td>
+          <td><%= b.start_date.strftime("%d/%m/%Y") %></td>
+          <td><%= b.end_date.strftime("%d/%m/%Y")%></td>
+          <td><%= b.booking_price%></td>
+          <td><%= link_to 'Show', booking_path(b) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
