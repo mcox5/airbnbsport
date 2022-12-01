@@ -1,1 +1,18 @@
-<h1>Aca va el booking</h1>
+<div class="card mb-3 m-3" style="max-width: 10000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dwf51cf0f9/images/imagenes-productos/800/MKW0/MKW09E9X6P-001.jpg?sw=513&sh=654&sm=fit" class="img-fluid rounded-start" alt="imagen">
+    </div>
+    <div class="col-md-8 d-flex align-items-center">
+      <div class="card-body" >
+        <h2 class="card-title"><%= @booking.product.name %></h2>
+        <p class="card-text">Precio Reserva: <%=@booking.booking_price %> USD</p>
+        <p class="card-text">Detalles producto: <%=@booking.product.description %></p>
+        <p class="card-text"><small class="text-strong">Desde: <%= @booking.start_date %> hasta: <%= @booking.end_date %></small></p>
+        <p class="card-text"><small class="text-strong"></small></p>
+        <p><small><button type="button" class="btn btn-light">Contacta al dueño **nicetohave: <%= @booking.product.user.email %></button></small></p>
+        <p><small><button type="button" class="btn btn-light"><%= link_to "Volver a mis reservas", bookings_path, class: "nav-link" %></button></small></p>
+      </div>
+    </div>
+  </div>
+</div>
