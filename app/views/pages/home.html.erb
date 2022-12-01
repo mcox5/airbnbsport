@@ -1,74 +1,95 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class= "text-carousel">
-   <h1> Find your equipments here </h1>
+<div class="container ml-0">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"></div>
+      <div class= "text-carousel">
+        <h1> Find your equipments here </h1>
+      </div>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <img src="<%=image_tag 'baseball.jpeg'%>" heigth=300px alt="Baseball image">-->
+        <%=image_tag "archery.jpeg", class: "d-block w-100"%>
+      </div>
+     <div class="carousel-item">
+       <!--<img src="<%=image_tag 'tenis.jpeg'%>" height=300px alt="Tenis image">-->
+        <%=image_tag "archery.jpeg", class: "d-block w-100"%>
+      </div>
+      <div class="carousel-item">
+        <!--<img src="<%=image_tag 'archery.jpeg' %>" height=300px alt="Archery image">-->
+        <%=image_tag "archery.jpeg", class: "d-block w-100"%>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-     <!-- <img src="<%=image_tag 'baseball.jpeg'%>" heigth=300px alt="Baseball image">-->
-     <%=image_tag "archery.jpeg"%>
-    </div>
-    <div class="carousel-item">
-      <!--<img src="<%=image_tag 'tenis.jpeg'%>" height=300px alt="Tenis image">-->
-      <%=image_tag "archery.jpeg"%>
-    </div>
-    <div class="carousel-item">
-      <!--<img src="<%=image_tag 'archery.jpeg' %>" height=300px alt="Archery image">-->
-      <%=image_tag "archery.jpeg"%>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<nav class="nav nav-pills nav-fill container">
-  <div class="text-center">
-   <i class="fa-solid fa-bicycle"></i>
-   <a class="nav-link active" aria-current="page" href="#">Cycling </a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-volleyball"></i>
-   <a class="nav-link disable">Voley</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-person-hiking"></i>
-   <a class="nav-link disable">Hiking</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-table-tennis-paddle-ball"></i>
-   <a class="nav-link disabled">Tenis</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-person-skiing"></i>
-   <a class="nav-link disabled">Skiing</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-basketball"></i>
-   <a class="nav-link disabled">Basketball</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-golf-ball-tee"></i>
-   <a class="nav-link disabled">Golf</a>
-  </div>
-  <div class="text-center">
-   <i class="fa-solid fa-table-tennis-paddle-ball"></i>
-   <a class="nav-link disabled">baseball</a>
-  </div>
-</nav>
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Airbnbsport <i class="fas fa-heart"></i>
+  <nav class="nav nav-pills nav-fill container">
+    <div class="text-center">
+      <i class="fa-solid fa-bicycle"></i>
+      <a class="nav-link active" aria-current="page" href="#">
+        <%= link_to "Cycling", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-volleyball"></i>
+      <a class="nav-link disable">
+       <%= link_to "Voley", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-person-hiking"></i>
+      <a class="nav-link disable">
+        <%= link_to "Hiking", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+      <a class="nav-link disabled">
+        <%= link_to "Tenis", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-person-skiing"></i>
+      <a class="nav-link disabled">
+        <%= link_to "Skiing", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-basketball"></i>
+      <a class="nav-link disabled">
+        <%= link_to "Basketball", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+      <i class="fa-solid fa-golf-ball-tee"></i>
+      <a class="nav-link disabled">
+        <%= link_to "Golf", products_path, class: "nav-link" %>
+      </a>
+    </div>
+    <div class="text-center">
+     <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+     <a class="nav-link disabled">
+        <%= link_to "Baseball", products_path, class: "nav-link" %>
+     </a>
+    </div>
+  </nav>
+  <div class="footer">
+    <div class="footer-links">
+     <a href="#"><i class="fab fa-github"></i></a>
+     <a href="#"><i class="fab fa-instagram"></i></a>
+     <a href="#"><i class="fab fa-facebook"></i></a>
+     <a href="#"><i class="fab fa-twitter"></i></a>
+     <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Airbnbsport <i class="fas fa-heart"></i>
+    </div>
   </div>
 </div>
