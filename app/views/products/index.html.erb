@@ -10,7 +10,9 @@
           <div class="col-4">
             <div class="w-auto p-3" style="background-color: #eee;">
               <div class="card shadow p-3 mb-5 bg-body rounded">
-                <img src="..." class="card-img-top rounded-2" alt="..">
+              <% if product.photo.key.present? %>
+              <%= cl_image_tag(product.photo.key, crop: :fill) %>
+              <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
                   <p class="card-text"><%= product.description %></p>

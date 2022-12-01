@@ -2,5 +2,6 @@
 <%= simple_form_for(@sport) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit 'Add sport', class: 'btn btn-primary' %>
 <% end %>
