@@ -1,63 +1,35 @@
+<!-- inicia el header de la card -->
 
-<header>
-    <div class="container-fluid align-items-center justify-content-center ">
-      <div class="text-center text-black bg-white">
-        <nav class="navbar bg-white fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Products</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sports</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-                <div class="offcanvas-body">
-              <% @sports.each do |sport| %>
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <%= sport.name %>
-                      </a>
-                    </li>
-              <% end %>
-                </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-</header>
+<!-- termina el header de la card -->
 
-
-<main>
+<!-- inicia el main de la card -->
+<div>
   <div class="bg-success p-2 text-dark bg-opacity-25">
-    <div class="d-flex align-content-stretch flex-wrap">
-      <div class="row row-cols-1 row-cols-md-3 g-4 my-2 mx-2 py-2 px-2">
+      <div class="row g-4 m-2 p-2">
         <% @products.each do |product| %>
-        <div class="col-12 lg-12">
-          <div class="w-auto p-3" style="background-color: #eee;">
-            <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
-              <img src="..." class="card-img-top rounded-2" alt="..">
-              <div class="card-body">
-                <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
-                <p class="card-text"><%= product.description %></p>
-              </div>
-              <div class="card-footer">
-                <p><small><%= product.price %> $USD</small></p>
-                <p><small class="text-muted">Contactar dueño: <%= User.find(product.user_id).email %></small></p>
+          <div class="col-4">
+            <div class="w-auto p-3" style="background-color: #eee;">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <img src="..." class="card-img-top rounded-2" alt="..">
+                <div class="card-body">
+                  <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
+                  <p class="card-text"><%= product.description %></p>
+                </div>
+                <div class="card-footer">
+                  <p><small><%= product.price %> $USD</small></p>
+                  <p><small class="text-muted">Contactar dueño: <%= User.find(product.user_id).email %></small></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         <% end %>
       </div>
-    </div>
   </div>
-</main>
+</div>
+<!-- termina el main de la card -->
 
-<footer class=>
+<!-- inicia el footer de la card -->
+<div>
     <div class="card text-center">
       <div class="card-header">
         Featured
@@ -73,12 +45,5 @@
           2 days ago
         </div>
     </div>
-</footer>
-</body>
-
-<div class="mt-3 mx-4">
-          <button type="button" class="btn btn-outline-secondary"><%= link_to "Arrienda tu propio equipo!", new_product_path, class: "nav-link" %> </button>
-        </div>
-
-
-<a href="#" class="btn btn-primary"><%= link_to "Arrienda tu propio equipo!", new_product_path, class: "nav-link" %></a>
+</div>
+<!-- termina el footer de la card -->
