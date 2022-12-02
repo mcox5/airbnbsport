@@ -1,10 +1,10 @@
-<div class="card mb-3 m-3" style="max-width: 10000px;">
+<div class="card col-12 mb-3 m-3" style="max-width: 10000px;">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dwf51cf0f9/images/imagenes-productos/800/MKW0/MKW09E9X6P-001.jpg?sw=513&sh=654&sm=fit" class="img-fluid rounded-start" alt="imagen">
+    <div class="col-7 md-4">
+      <%= cl_image_tag(@booking.product.photo.key, crop: :fill, width: 450) %>
     </div>
-    <div class="col-md-8 d-flex align-items-center">
-      <div class="card-body" >
+    <div class="col-5 md-8 d-flex align-items-center">
+      <div class="card-body col-5" >
         <h2 class="card-title"><%= @booking.product.name %></h2>
         <p class="card-text">Precio Reserva: <%=@booking.booking_price %> USD</p>
         <p class="card-text">Detalles producto: <%=@booking.product.description %></p>

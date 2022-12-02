@@ -1,15 +1,15 @@
-<div>
-  <div class="container bg">
-      <div class="w-100 p-4 m-3" style="background-color: #eee;">
-        <%= simple_form_for(@product) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :price %>
-        <%= f.association :sport %>
-        <%= f.input :photo, as: :file %>
-       <%= f.submit 'Create', class: 'btn btn-primary' %>
-       <%end%>
-      </div>
+<div class="bg-success p-2 text-dark bg-opacity-25">
+  <div class="container">
+        <div class= >
+          <%= simple_form_for(@product) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.association :sport %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit 'Create', class: 'btn btn-primary' %>
+          <%end%>
+        </div>
   </div>
 </div>
 
@@ -26,6 +26,7 @@
           <button type="button" class="btn btn-outline-success text-primary text-opacity-75"><%= link_to "Arrienda tu propio equipo!", new_product_path, class: "nav-link" %> </button>
         </div>
       </div>
+
 
     <div class="card-footer w-100">
       <div class="footer-links">
