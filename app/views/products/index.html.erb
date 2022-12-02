@@ -8,11 +8,10 @@
       <div class="row g-4 m-2 p-2">
         <% @products.each do |product| %>
           <div class="col-4">
-            <div class="w-auto p-3" style="background-color: #eee;">
-              <div class="card shadow p-3 mb-5 bg-body rounded">
-              <% if product.photo.key.present? %>
-              <%= cl_image_tag(product.photo.key, crop: :fill) %>
-              <% end %>
+              <div class="card shadow p-3 mb-5 bg-body">
+                <% if product.photo.key.present? %>
+                <%= cl_image_tag(product.photo.key, crop: :fill, height: 200) %>
+                <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
                   <p class="card-text"><%= product.description %></p>
@@ -21,8 +20,10 @@
                   <p><small><%= product.price %> $USD</small></p>
                   <p><small class="text-muted">Contactar dueño: <%= User.find(product.user_id).email %></small></p>
                 </div>
+                <div class= "my-3">
+                  <button type="button" class="btn btn-outline-success rounded-pill"><%= link_to product.name, product_path(product), class: "nav-link" %></button>
+                </div>
               </div>
-            </div>
           </div>
         <% end %>
       </div>
@@ -61,3 +62,6 @@
 
 
 <!-- termina el footer de la card -->
+
+
+border border-2 p-4 bg
