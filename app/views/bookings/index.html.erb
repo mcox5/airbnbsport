@@ -14,7 +14,7 @@
     <tbody>
       <% @bookings.each do |b| %>
         <tr>
-          <td><%= cl_image_tag(product.photo.key, crop: :fill) %></td>
+         <!-- <td><%= cl_image_tag(b.product.photo.key, crop: :fill) %></td> -->
           <td><%= b.product.name%></td>
           <td><%= b.product.description%></td>
           <td><%= b.start_date.strftime("%d/%m/%Y") %></td>
