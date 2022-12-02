@@ -1,8 +1,6 @@
 class SportsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
-
   def index
-    @sports = Sport.all
+    @sports = policy_scope(Sport)
   end
 
   def new
@@ -23,7 +21,7 @@ class SportsController < ApplicationController
 
   def sport_params
     params.require(:sport).permit(
-      :name, :photo
+      :name
     )
   end
 end
