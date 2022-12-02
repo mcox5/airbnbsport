@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @marker = { lat: @product.user.latitude, lng: @product.user.longitude }
+    @marker = [{ lat: @product.user.latitude, lng: @product.user.longitude }]
     authorize @product
   end
 
