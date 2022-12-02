@@ -3,32 +3,31 @@
 <!-- termina el header de la card -->
 
 <!-- inicia el main de la card -->
-<div>
+
   <div class="bg-success p-2 text-dark bg-opacity-25">
-      <div class="row g-4 m-2 p-2">
-        <% @products.each do |product| %>
-          <div class="col-4">
-              <div class="card shadow p-3 mb-5 bg-body">
-                <% if product.photo.key.present? %>
-                <%= cl_image_tag(product.photo.key, crop: :fill, height: 200) %>
-                <% end %>
-                <div class="card-body">
-                  <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
-                  <p class="card-text"><%= product.description %></p>
-                </div>
-                <div class="card-footer">
-                  <p><small><%= product.price %> $USD</small></p>
-                  <p><small class="text-muted">Contactar dueño: <%= User.find(product.user_id).email %></small></p>
-                </div>
-                <div class= "my-3">
-                  <button type="button" class="btn btn-outline-success rounded-pill"><%= link_to product.name, product_path(product), class: "nav-link" %></button>
-                </div>
-              </div>
+
+    <div class="row">
+      <% @products.each do |product| %>
+      <div class="col-3 col-lg-3">
+        <div class="card-trip">
+          <% if product.photo.key.present? %>
+          <%= cl_image_tag(product.photo.key) %>
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h5 class="card-title"><%= link_to product.name, product_path(product), class: "nav-link" %></h5>
+              <p class="card-text"><%= product.description %></p>
+            </div>
+              <p><small><%= product.price %> $USD</small></p>
+              <p><small class="text-muted">Contactar dueño: <%= User.find(product.user_id).email %></small></p>
           </div>
-        <% end %>
+        </div>
       </div>
+      <% end %>
+    </div>
   </div>
-</div>
+
+
 <!-- termina el main de la card -->
 
 <!-- inicia el footer de la card -->
