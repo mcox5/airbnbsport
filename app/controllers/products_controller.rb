@@ -3,8 +3,13 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = policy_scope(Product)
-    @sports = Sport.all
+    #@products = policy_scope(Product)
+    #@sports = Sport.all
+    if params[:query].present?
+      @products = policy_scope(Product.products_search(params[:query]))
+    else
+      @products = policy_scope(Product)
+    end
   end
 
   def new
