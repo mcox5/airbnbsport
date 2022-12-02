@@ -1,4 +1,6 @@
 class SportsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
+
   def index
     @sports = Sport.all
   end
@@ -21,7 +23,7 @@ class SportsController < ApplicationController
 
   def sport_params
     params.require(:sport).permit(
-      :name
+      :name, :photo
     )
   end
 end

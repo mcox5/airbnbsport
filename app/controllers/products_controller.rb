@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
 
   def index
     @products = policy_scope(Product)
@@ -49,6 +51,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :sport_id)
+    params.require(:product).permit(:name, :description, :price, :sport_id, :photo)
   end
 end
