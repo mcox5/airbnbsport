@@ -1,17 +1,19 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = policy_scope(Product)
     @sports = Sport.all
   end
 
   def new
     @product = Product.new
+    authorize @product
   end
 
   def create
     @product = Product.new(product_params)
     @product.user = current_user
+    authorize @product
     if @product.save!
       redirect_to products_path
     else
@@ -21,6 +23,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def edit

@@ -1,15 +1,17 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def new
     @product = Product.find(params[:product_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -19,6 +21,7 @@ class BookingsController < ApplicationController
     @booking.product_id = @product.id
     @days = (@booking.end_date - @booking.start_date).to_i
     @booking.booking_price = @days * @product.price
+    authorize @booking
     if @booking.save
       redirect_to booking_path(@booking)
     else

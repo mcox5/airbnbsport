@@ -9,15 +9,23 @@
     <h3 class="mb-0">My sports</h3>
     <%= link_to "My sports", new_sport_path, class: "btn btn-flat" %>
   </div>
-  <div class="row">
-    <% @sports.each do |sport| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to sports_path(sport), class:"text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in">
-            <%= sport.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
 </div>
+<% @sports.each do |sport| %>
+  <% if sport.name == "Trekking" %>
+    <div class="card-category my-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/3669288/pexels-photo-3669288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)">
+     <%=sport.name  %>
+    </div>
+  <% elsif sport.name == "Tenis" %>
+    <div class="card-category my-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/5739125/pexels-photo-5739125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)">
+     <%=sport.name  %>
+    </div>
+  <% elsif sport.name == "Futbol" %>
+    <div class="card-category my-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/2610960/pexels-photo-2610960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)">
+     <%=sport.name  %>
+    </div>
+  <% elsif sport.name == "Basquetball" %>
+    <div class="card-category my-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/6763762/pexels-photo-6763762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)">
+     <%=sport.name  %>
+    </div>
+  <% end %>
+<% end %>
