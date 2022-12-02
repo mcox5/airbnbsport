@@ -1,14 +1,3 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-black">
-    <h1>Save any kind of sports</h1>
-    <h3 class="typed-js" data-controller="typed-js"></h3>
-  </div>
-</div>
-<div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <%= link_to "My sports", new_sport_path, class: "btn btn-flat" %>
-  </div>
-</div>
 <% @sports.each do |sport| %>
   <% if sport.name == "Trekking" %>
     <div class="card-category my-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/3669288/pexels-photo-3669288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)">
