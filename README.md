@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+This project is the first aproximation to an MVC architecture model using Ruby on Rails. 
+
+Consist in lease or rent your sport stuff, as an airbnb service.
+
+
